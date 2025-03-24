@@ -15,5 +15,5 @@ int main(){
             currSum = 0;
         }
     }
-    cout<<"MAximum sum of subarray is = "<<maxSum;
+    cout<<"Maximum sum of subarray is = "<<maxSum;
 }
