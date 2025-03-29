@@ -9,7 +9,7 @@ int binarySearch(vector<int> nums, int st, int e,int target){
         if(nums[mid] == target){
             return mid;
         }
-        if(nums[mid] >= nums[st] ){
+        if(nums[mid] >= nums[st] ){  //left
             if(target >= nums[st] && target <= nums[e]){
                 e = mid-1;
             }
@@ -18,7 +18,7 @@ int binarySearch(vector<int> nums, int st, int e,int target){
             }
         }
         else{
-            if(target >= nums[mid] && target <= nums[e]){
+            if(target >= nums[mid] && target <= nums[e]){  //right
                 st = mid+1;
             }
             else{

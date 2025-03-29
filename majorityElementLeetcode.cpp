@@ -37,9 +37,9 @@ int majoritySorting(vector<int> vec)
     sort(vec.begin(), vec.end());
 
     // sorted array
-     for(int i:vec){
-         cout<<i<<" ";
-     }
+    //  for(int i:vec){
+    //      cout<<i<<" ";
+    //  }
 
     for (int i = 1; i < size; i++)
     {
