@@ -46,6 +46,11 @@ int gcdRec(int n1, int n2){
     return gcdRec(n2, n1%n2);
 }
 
+int lcm(int n1, int n2){
+    int gcd = gcdRec(n1,n2);
+    return (n1*n2)/gcd;
+}
+
 int main(){
     int n1 = 20, n2 =28;
 
@@ -53,5 +58,7 @@ int main(){
     // int res = EuclidsAlgoUsingSubtraction(n1,n2); 
     // int res = EuclidsAlgoUsingdivision(n1,n2); 
     int res = gcdRec(n1,n2);
+    int l = lcm(n1,n2);
     cout<<res<<endl;
+    cout<<l<<endl;
 }
