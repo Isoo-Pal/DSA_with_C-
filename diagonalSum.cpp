@@ -6,7 +6,7 @@
 #include<iostream>
 using namespace std;
 
-int diagonalSum(int matrix[][3], int n){
+int diagonalSum(int matrix[][3], int n){  //O(n*n)
     int sum=0;
     for(int i=0; i<n;i++){
         for(int j=0; j<n; j++){
@@ -21,6 +21,17 @@ int diagonalSum(int matrix[][3], int n){
     return sum;
 }
 
+int diagonalSumOptimized(int matrix[][3], int n){  //O(n)
+    int sum=0;
+    for(int i=0; i<n;i++){
+        sum += matrix[i][i];
+        if(i != n-i-1){
+            sum += matrix[i][n-i-1];
+        }
+    }
+    return sum;
+}
+
 int main(){
     int matrix[4][4] = {{1,2,3,4},{4,5,6,7},{7,8,9,10},{10,11,12,13}};
     int mat[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
@@ -30,4 +41,7 @@ int main(){
     // int sum = diagonalSum(matrix, n);
     int sum = diagonalSum(mat, n2);
     cout<<"Diagonal sum : "<<sum<<endl;
+
+    int sum2 = diagonalSumOptimized(mat, n2);
+    cout<<"Diagonal sum : "<<sum2<<endl;
 }
