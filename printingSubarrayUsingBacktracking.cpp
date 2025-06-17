@@ -2,6 +2,7 @@
 #include<vector>
 using namespace std;
 
+//TC = O(2^n * n)
 void printSubsets(vector<int>& nums, vector<int>& ans, int i){
     if(i == nums.size()){
         for(auto val: ans){
