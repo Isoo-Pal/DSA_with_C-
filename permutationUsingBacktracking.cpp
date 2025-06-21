@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+//TC - O(n! * n)
+//SC - O(n! * n)
 void getPerms(vector<int> &nums, int idx, vector<vector<int>> &ans){
     if(idx == nums.size()){
         ans.push_back({nums});
