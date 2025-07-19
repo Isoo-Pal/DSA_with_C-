@@ -37,13 +37,13 @@ bool solveSudoku(vector<vector<char>>& board, int row, int col){
 
     if(board[row][col] != '.'){
         return solveSudoku(board, nextRow, nextCol);
-    }
+    } 
 
     for(char dig='1'; dig<='9'; dig++){
         if(isSafe(board, row, col, dig)){
             board[row][col] = dig;
             if(solveSudoku(board, row, col)){return true;}
-        }
+        }                                
         board[row][col] = '.';
     }
     return false;
