@@ -16,6 +16,7 @@ void printSubsets(vector<int>& nums, vector<int>& ans, int i){
 
     ans.pop_back();    //exculde  (backtrack)
     printSubsets(nums, ans, i+1);
+    return;
 
 
 }
